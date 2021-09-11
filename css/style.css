@@ -1,0 +1,42 @@
+/*Generales*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 16px;
+}
+ /*Utilidades*/
+.container {
+     width: 90%;
+     max-width: 1200px;
+     margin: 0 auto;
+}
+nav{
+    padding: 1.6rem;
+    background-color: black;
+    text-align: end;
+    position: sticky;
+    top: 0;
+}
+.nav__link {
+     text-decoration: none;
+     text-transform: uppercase;
+     margin: 1rem;
+     color: white;
+     font-family: sans-serif;
+}
+.nav__link:last-child {
+    margin-right: 5rem;
+}
+/*Estos dos div son solamente para poder ver el efecto en funcionamiento*/
+.div{
+    height: 200px;
+}
+div{
+    height: 1000px;
+}
