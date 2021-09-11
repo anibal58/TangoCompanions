@@ -1,42 +1,206 @@
 /*Generales*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap");
+:root {
+  --font-family: 'Mukta', sans-serif;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
+
 body {
-    font-size: 16px;
+  font-size: 16px;
+  font-family: var(--font-family);
 }
- /*Utilidades*/
+
+/*Utilidades*/
 .container {
-     width: 90%;
-     max-width: 1200px;
-     margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-nav{
-    padding: 1.6rem;
-    background-color: black;
-    text-align: end;
-    position: sticky;
-    top: 0;
+
+/*Parallax Effect*/
+.parallax {
+  background: url("../img/img1.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 600px;
+  position: relative;
 }
+
+.parallax .parallax__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.parallax .parallax__content .parallax__title {
+  font-size: 20rem;
+  color: white;
+  text-transform: uppercase;
+}
+
+.parallax .parallax__content .parallax__text {
+  height: 15rem;
+  stroke-dasharray: 4363.1139;
+  stroke-dashoffset: 4363.1139;
+}
+
+.parallax .parallax__content path:nth-child(1) {
+  stroke-dasharray: 10px;
+  -webkit-animation: animation ease forwards;
+          animation: animation ease forwards;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+.parallax .parallax__content path:nth-child(2) {
+  stroke-dasharray: 20px;
+  -webkit-animation: animation ease forwards;
+          animation: animation ease forwards;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+}
+
+.parallax .parallax__content path:nth-child(3) {
+  stroke-dasharray: 30px;
+  -webkit-animation: animation ease forwards;
+          animation: animation ease forwards;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
+}
+
+.parallax .parallax__content path:nth-child(4) {
+  stroke-dasharray: 40px;
+  -webkit-animation: animation ease forwards;
+          animation: animation ease forwards;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+}
+
+.parallax .parallax__content path:nth-child(5) {
+  stroke-dasharray: 50px;
+  -webkit-animation: animation ease forwards;
+          animation: animation ease forwards;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 9s;
+          animation-delay: 9s;
+}
+
+.parallax .parallax__content path:nth-child(6) {
+  stroke-dasharray: 60px;
+  -webkit-animation: animation ease forwards;
+          animation: animation ease forwards;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+}
+
+.parallax .parallax__content path:nth-child(7) {
+  stroke-dasharray: 70px;
+  -webkit-animation: animation ease forwards;
+          animation: animation ease forwards;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 11s;
+          animation-delay: 11s;
+}
+
+.parallax .parallax__content path:nth-child(8) {
+  stroke-dasharray: 80px;
+  -webkit-animation: animation ease forwards;
+          animation: animation ease forwards;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 12s;
+          animation-delay: 12s;
+}
+
+.parallax .parallax__content path:nth-child(9) {
+  stroke-dasharray: 90px;
+  -webkit-animation: animation ease forwards;
+          animation: animation ease forwards;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 13s;
+          animation-delay: 13s;
+}
+
+.parallax .parallax__content path:nth-child(10) {
+  stroke-dasharray: 100px;
+  -webkit-animation: animation ease forwards;
+          animation: animation ease forwards;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 14s;
+          animation-delay: 14s;
+}
+
+@-webkit-keyframes animation {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: white;
+  }
+}
+
+@keyframes animation {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: white;
+  }
+}
+
+/*Navegacion*/
+nav {
+  padding: 1.6rem;
+  background-color: black;
+  text-align: end;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
 .nav__link {
-     text-decoration: none;
-     text-transform: uppercase;
-     margin: 1rem;
-     color: white;
-     font-family: sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 1rem;
+  color: white;
+  font-weight: 300;
+  letter-spacing: 2px;
 }
+
 .nav__link:last-child {
-    margin-right: 5rem;
+  margin-right: 5rem;
 }
-/*Estos dos div son solamente para poder ver el efecto en funcionamiento*/
-.div{
-    height: 200px;
-}
-div{
-    height: 1000px;
-}
+/*# sourceMappingURL=style.css.map */
