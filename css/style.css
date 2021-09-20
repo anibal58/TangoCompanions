@@ -4,6 +4,8 @@
 :root {
   --font-family: 'Mukta', sans-serif;
   --font-family-cursive: 'Engagement', cursive;
+  --text-shadow: 0 0 1rem rgba(0,0,0,0.5)
+;
 }
 
 * {
@@ -29,48 +31,6 @@ body {
   margin: 0 auto;
 }
 
-/*Parallax Effect*/
-.parallax {
-  background: url("../img/img1.jpg") no-repeat center;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 600px;
-  position: relative;
-}
-
-.parallax .parallax__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
-}
-
-.parallax .parallax__content .parallax__title {
-  font-size: 20rem;
-  color: white;
-  text-transform: uppercase;
-}
-
-.parallax .parallax__content .parallax__subtitle {
-  font-family: var(--font-family-cursive);
-  font-size: 12rem;
-  color: white;
-  margin-left: 1rem;
-}
-
-.parallax .parallax__content .typewritten-text_character::after,
-.parallax .parallax__content .typewritten-text_start::after {
-  --typewritten-text_cursor-color: transparent ;
-}
-
 /*Navegacion*/
 nav {
   padding: 1.6rem;
@@ -81,7 +41,23 @@ nav {
   top: 0;
 }
 
+nav .nav__toggler {
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+nav .nav__toggler .bi-chevron-double-left {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.nav__links {
+  display: none;
+}
+
 .nav__link {
+  display: block;
   text-decoration: none;
   text-transform: uppercase;
   margin: 1rem;
@@ -90,7 +66,91 @@ nav {
   letter-spacing: 2px;
 }
 
-.nav__link:last-child {
-  margin-right: 5rem;
+.nav__link:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .nav__links {
+    display: block;
+  }
+  .nav__toggler {
+    display: none;
+  }
+  .nav__link {
+    display: inline;
+  }
+  .nav__link:last-child {
+    margin-right: 2rem;
+  }
+}
+
+/*Parallax Effect*/
+.parallax {
+  background: url("../img/img1.jpg") no-repeat center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 400px;
+  position: relative;
+  z-index: -1;
+}
+
+.parallax .parallax__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 100%;
+}
+
+.parallax .parallax__content .parallax__title {
+  font-size: 10rem;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+
+.parallax .parallax__content .parallax__subtitle {
+  font-family: var(--font-family-cursive);
+  font-size: 8rem;
+  color: white;
+  margin-left: 1rem;
+}
+
+.parallax .parallax__content .typewritten-text_character::after,
+.parallax .parallax__content .typewritten-text_start::after {
+  --typewritten-text_cursor-color: transparent ;
+}
+
+@media (min-width: 768px) {
+  .parallax {
+    height: 600px;
+  }
+  .parallax .parallax__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .parallax .parallax__content .parallax__title {
+    font-size: 12rem;
+  }
+  .parallax .parallax__content .parallax__subtitle {
+    font-size: 10rem;
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .parallax .parallax__content .parallax__title {
+    font-size: 16rem;
+  }
+  .parallax .parallax__content .parallax__subtitle {
+    font-size: 12rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
