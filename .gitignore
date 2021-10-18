@@ -1,4 +1,6 @@
-css/style.css.map
-css/style.scss
+node_modules
+package.json
+package-lock.json
+scss
 LICENSE
 .vscode
