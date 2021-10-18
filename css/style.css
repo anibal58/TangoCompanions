@@ -1,206 +1,171 @@
 /*Generales*/
 @import url("https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap");
-:root {
-  --font-family: 'Mukta', sans-serif;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Engagement&display=swap");
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 html {
-  font-size: 62.5%;
-}
+  font-size: 62.5%; }
 
 body {
   font-size: 16px;
-  font-family: var(--font-family);
-}
+  font-family: "Mukta", sans-serif;
+  background-color: #0c0c0c; }
+
+h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 1rem; }
+
+p {
+  text-align: center; }
 
 /*Utilidades*/
 .container {
   width: 90%;
   max-width: 1200px;
-  margin: 0 auto;
-}
-
-/*Parallax Effect*/
-.parallax {
-  background: url("../img/img1.jpg") no-repeat center;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 600px;
-  position: relative;
-}
-
-.parallax .parallax__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
-}
-
-.parallax .parallax__content .parallax__title {
-  font-size: 20rem;
-  color: white;
-  text-transform: uppercase;
-}
-
-.parallax .parallax__content .parallax__text {
-  height: 15rem;
-  stroke-dasharray: 4363.1139;
-  stroke-dashoffset: 4363.1139;
-}
-
-.parallax .parallax__content path:nth-child(1) {
-  stroke-dasharray: 10px;
-  -webkit-animation: animation ease forwards;
-          animation: animation ease forwards;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
-}
-
-.parallax .parallax__content path:nth-child(2) {
-  stroke-dasharray: 20px;
-  -webkit-animation: animation ease forwards;
-          animation: animation ease forwards;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 6s;
-          animation-delay: 6s;
-}
-
-.parallax .parallax__content path:nth-child(3) {
-  stroke-dasharray: 30px;
-  -webkit-animation: animation ease forwards;
-          animation: animation ease forwards;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 7s;
-          animation-delay: 7s;
-}
-
-.parallax .parallax__content path:nth-child(4) {
-  stroke-dasharray: 40px;
-  -webkit-animation: animation ease forwards;
-          animation: animation ease forwards;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 8s;
-          animation-delay: 8s;
-}
-
-.parallax .parallax__content path:nth-child(5) {
-  stroke-dasharray: 50px;
-  -webkit-animation: animation ease forwards;
-          animation: animation ease forwards;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 9s;
-          animation-delay: 9s;
-}
-
-.parallax .parallax__content path:nth-child(6) {
-  stroke-dasharray: 60px;
-  -webkit-animation: animation ease forwards;
-          animation: animation ease forwards;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 10s;
-          animation-delay: 10s;
-}
-
-.parallax .parallax__content path:nth-child(7) {
-  stroke-dasharray: 70px;
-  -webkit-animation: animation ease forwards;
-          animation: animation ease forwards;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 11s;
-          animation-delay: 11s;
-}
-
-.parallax .parallax__content path:nth-child(8) {
-  stroke-dasharray: 80px;
-  -webkit-animation: animation ease forwards;
-          animation: animation ease forwards;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 12s;
-          animation-delay: 12s;
-}
-
-.parallax .parallax__content path:nth-child(9) {
-  stroke-dasharray: 90px;
-  -webkit-animation: animation ease forwards;
-          animation: animation ease forwards;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 13s;
-          animation-delay: 13s;
-}
-
-.parallax .parallax__content path:nth-child(10) {
-  stroke-dasharray: 100px;
-  -webkit-animation: animation ease forwards;
-          animation: animation ease forwards;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 14s;
-          animation-delay: 14s;
-}
-
-@-webkit-keyframes animation {
-  from {
-    fill: transparent;
-  }
-  to {
-    fill: white;
-  }
-}
-
-@keyframes animation {
-  from {
-    fill: transparent;
-  }
-  to {
-    fill: white;
-  }
-}
+  margin: 0 auto; }
 
 /*Navegacion*/
 nav {
   padding: 1.6rem;
-  background-color: black;
+  background-color: #0c0c0c;
   text-align: end;
-  position: -webkit-sticky;
   position: sticky;
-  top: 0;
-}
+  top: 0; }
+  nav .nav__toggler {
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem; }
+    nav .nav__toggler .bi-chevron-double-left {
+      transform: rotate(90deg); }
+
+.nav__links {
+  display: none; }
 
 .nav__link {
+  display: block;
   text-decoration: none;
   text-transform: uppercase;
   margin: 1rem;
   color: white;
   font-weight: 300;
-  letter-spacing: 2px;
-}
+  letter-spacing: 2px; }
+  .nav__link:hover {
+    text-decoration: underline; }
 
-.nav__link:last-child {
-  margin-right: 5rem;
-}
-/*# sourceMappingURL=style.css.map */
+@media (min-width: 768px) {
+  .nav__links {
+    display: block; }
+  .nav__toggler {
+    display: none; }
+  .nav__link {
+    display: inline; }
+  .nav__link:last-child {
+    margin-right: 2rem; } }
+
+/*Parallax Effect*/
+.parallax1 {
+  background: url("../img/img7.jpg") no-repeat bottom;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 400px;
+  z-index: -1; }
+  .parallax1 .parallax__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; }
+    .parallax1 .parallax__content .parallax__title {
+      font-size: 10rem;
+      color: white;
+      text-transform: uppercase;
+      margin-top: 2rem;
+      text-align: center; }
+      .parallax1 .parallax__content .parallax__title span {
+        font-family: "Engagement", cursive;
+        font-size: 8rem;
+        color: white;
+        text-transform: none;
+        margin-left: 1rem;
+        font-weight: normal; }
+
+.parallax2 {
+  background: url("../img/img8.jpg") no-repeat center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 400px; }
+
+.parallax3 {
+  background: url("../img/img10.jpg") no-repeat center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 400px; }
+
+.parallax4 {
+  background: url("../img/img11.jpg") no-repeat top;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 400px; }
+
+@media (min-width: 768px) {
+  .parallax {
+    height: 600px; }
+    .parallax .parallax__title {
+      font-size: 12rem; } }
+
+@media (min-width: 1440px) {
+  .parallax .parallax__content .parallax__title {
+    font-size: 16rem; }
+  .parallax .parallax__content .parallax__subtitle {
+    font-size: 12rem; } }
+
+.card {
+  margin: 5rem auto;
+  padding: 2rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.button {
+  background-color: #7fffd4;
+  color: #0c0c0c;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 2rem auto;
+  text-align: center; }
+  .button:hover {
+    background-color: #5db497; }
+
+.link {
+  font-style: italic;
+  color: #7fffd4;
+  text-decoration: none; }
+  .link:hover {
+    color: #5db497; }
+
+.nosotros-link {
+  display: flex;
+  justify-content: center; }
+  .nosotros-link link {
+    margin-left: 1rem; }
+
+footer {
+  padding: 2rem;
+  color: #fff; }
+
+@media (min-width: 768px) {
+  footer {
+    display: flex;
+    justify-content: center; } }
