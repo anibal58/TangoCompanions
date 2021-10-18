@@ -30,7 +30,7 @@ p {
 
 /*Navegacion*/
 nav {
-  padding: 1.6rem;
+  padding: 1.6rem 0 0 0;
   background-color: #0c0c0c;
   text-align: end;
   position: sticky;
@@ -56,15 +56,50 @@ nav {
   .nav__link:hover {
     text-decoration: underline; }
 
+.show-animation {
+  animation: show 0.2s linear; }
+
+@keyframes show {
+  from {
+    transform: translate3d(0, -100%, 0);
+    opacity: 0; }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1; } }
+
+.hide-animation {
+  animation: hide 0.2s linear; }
+
+@keyframes hide {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 1; }
+  to {
+    transform: translate3d(0, -100%, 0);
+    opacity: 0; } }
+
 @media (min-width: 768px) {
   .nav__links {
-    display: block; }
+    display: block;
+    margin-bottom: 1rem; }
   .nav__toggler {
     display: none; }
   .nav__link {
     display: inline; }
   .nav__link:last-child {
     margin-right: 2rem; } }
+
+/*Barra de progreso*/
+.progreso {
+  width: 100%;
+  height: 0.6rem;
+  background-color: #0c0c0c;
+  z-index: 10; }
+
+.barra {
+  height: 0.6rem;
+  background-color: #7fffd4;
+  width: 0%; }
 
 /*Parallax Effect*/
 .parallax1 {
