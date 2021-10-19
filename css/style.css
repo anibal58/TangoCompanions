@@ -13,11 +13,14 @@ body {
   font-size: 16px;
   font-family: "Mukta", sans-serif;
   background-color: #0c0c0c; }
+  body.fix-body {
+    overflow: hidden; }
 
 h2 {
   text-align: center;
   font-size: 3rem;
-  margin: 1rem; }
+  margin: 1rem;
+  color: #fff; }
 
 p {
   text-align: center; }
@@ -30,7 +33,7 @@ p {
 
 /*Navegacion*/
 nav {
-  padding: 1.6rem;
+  padding: 1.6rem 0 0 0;
   background-color: #0c0c0c;
   text-align: end;
   position: sticky;
@@ -56,9 +59,32 @@ nav {
   .nav__link:hover {
     text-decoration: underline; }
 
+.show-animation {
+  animation: show 0.2s linear; }
+
+@keyframes show {
+  from {
+    transform: translate3d(0, -100%, 0);
+    opacity: 0; }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1; } }
+
+.hide-animation {
+  animation: hide 0.2s linear; }
+
+@keyframes hide {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 1; }
+  to {
+    transform: translate3d(0, -100%, 0);
+    opacity: 0; } }
+
 @media (min-width: 768px) {
   .nav__links {
-    display: block; }
+    display: block;
+    margin-bottom: 1rem; }
   .nav__toggler {
     display: none; }
   .nav__link {
@@ -66,9 +92,21 @@ nav {
   .nav__link:last-child {
     margin-right: 2rem; } }
 
+/*Barra de progreso*/
+.progreso {
+  width: 100%;
+  height: 0.6rem;
+  background-color: #0c0c0c;
+  z-index: 10; }
+
+.barra {
+  height: 0.6rem;
+  background-color: #7fffd4;
+  width: 0%; }
+
 /*Parallax Effect*/
 .parallax1 {
-  background: url("../img/img7.jpg") no-repeat bottom;
+  background: url("../img/img1.jpg") no-repeat bottom;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -94,21 +132,21 @@ nav {
         font-weight: normal; }
 
 .parallax2 {
-  background: url("../img/img8.jpg") no-repeat center;
+  background: url("../img/img2.jpg") no-repeat center;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   height: 400px; }
 
 .parallax3 {
-  background: url("../img/img10.jpg") no-repeat center;
+  background: url("../img/img3.jpg") no-repeat center;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   height: 400px; }
 
 .parallax4 {
-  background: url("../img/img11.jpg") no-repeat top;
+  background: url("../img/img4.jpg") no-repeat top;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -169,3 +207,98 @@ footer {
   footer {
     display: flex;
     justify-content: center; } }
+
+.galeria {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem; }
+  .galeria__item {
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer; }
+    .galeria__item:hover .zoom {
+      transform: scale(1); }
+
+.item-1 {
+  background-image: url("../img/img1.jpg"); }
+  .item-1:hover {
+    filter: sepia(100%); }
+
+.item-2 {
+  background-image: url("../img/img2.jpg"); }
+  .item-2:hover {
+    filter: sepia(100%); }
+
+.item-3 {
+  background-image: url("../img/img3.jpg"); }
+  .item-3:hover {
+    filter: sepia(100%); }
+
+.item-4 {
+  background-image: url("../img/img4.jpg"); }
+  .item-4:hover {
+    filter: sepia(100%); }
+
+.item-5 {
+  background-image: url("../img/img5.jpg"); }
+  .item-5:hover {
+    filter: sepia(100%); }
+
+.item-6 {
+  background-image: url("../img/img6.jpg"); }
+  .item-6:hover {
+    filter: sepia(100%); }
+
+.item-7 {
+  background-image: url("../img/img7.jpg"); }
+  .item-7:hover {
+    filter: sepia(100%); }
+
+.item-8 {
+  background-image: url("../img/img8.jpg"); }
+  .item-8:hover {
+    filter: sepia(100%); }
+
+.item-9 {
+  background-image: url("../img/img9.jpg"); }
+  .item-9:hover {
+    filter: sepia(100%); }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background-color: rgba(13, 13, 13, 0.37); }
+  .overlay img {
+    display: block;
+    width: 95%;
+    max-width: 80rem; }
+
+.btn-cerrar {
+  width: 4rem;
+  height: 4rem;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #0c0c0c;
+  display: grid;
+  place-items: center; }
+  .btn-cerrar:hover {
+    cursor: pointer; }
+
+@media (min-width: 480px) {
+  .galeria {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media (min-width: 768px) {
+  .galeria {
+    grid-template-columns: repeat(3, 1fr); } }
