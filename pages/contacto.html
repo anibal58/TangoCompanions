@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <title>Contacto | Tango Companions</title>
+</head>
+<body>
+    <!-- Navegación -->
+    <nav>
+        <div class="nav__toggler">
+            <i class="bi bi-chevron-double-left toggler"></i>
+        </div>
+        <div class="animation hide-animation">
+
+            <div class="nav__links" id="nav-toggler">
+                <a href="../index.html#historia" class="nav__link">Historia</a>
+                <a href="../index.html#nosotros" class="nav__link">Nosotros</a>
+                <a href="../index.html#bailar" class="nav__link">Bailar</a>
+                <a href="../pages/galeria.html" class="nav__link">Galeria</a>
+                <a href="#" class="nav__link">Contacto</a>
+            </div>
+        </div>
+        <!-- Barra de progreso -->
+        <div class="progreso">
+            <div class="barra">
+    
+            </div>
+        </div>
+        
+    </nav>
+    
+    <main class="container" id='form'>
+        <h2>Contacto</h2>
+        <form action="../js/validacion.js" method="get">
+          <label for="iname">Nombre:</label>
+          <input class="campo" id="iname" type="text" name ="name"><br>
+
+          <label for="iemail">E-mail:</label>
+          <input class="campo" id="iemail" type="email" name ="email"><br>
+
+          <label for="irequest">Consulta:</label><br>
+          <textarea class="campo" id="irequest" type="textarea" name ="request"></textarea><br>          
+          <br>
+          <button type="submit" value="Enviar" onclick= "return enviarFormulario" class="button">Enviar</button>  
+        </form>
+    </main>
+
+    <footer>
+        <p>Curso Full Stack Python | Comisión 2172 - </p>
+        <p>Alumnos: Valeria Silveira y Anibal Maidana</p>
+    </footer>
+
+    <script src="../js/validacion.js"></script>
+</body>
+</html>
