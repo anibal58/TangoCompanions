@@ -8,7 +8,7 @@ function validar(){
   let flag2 = false;
     
     
-    if(regn.test(nombre) || nombre != "" ){
+    if(regn.test(nombre) || nombre !== "" ){
       document.getElementById("texto1").innerHTML="Nombre válido";
       document.getElementById("texto1").style.visibility="visible";
       document.getElementById("texto1").style.color= "#33ff00";
@@ -19,7 +19,7 @@ function validar(){
       document.getElementById("texto1").style.color="#ff0000";
     }
     
-    if(regx.test(email) || nombre != ""){
+    if(regx.test(email) || email !== ""){
       document.getElementById("texto2").innerHTML="Email válido";
       document.getElementById("texto2").style.visibility="visible";
       document.getElementById("texto2").style.color= "#33ff00";
@@ -30,8 +30,8 @@ function validar(){
       document.getElementById("texto2").style.color="#ff0000";
     } 
 
-    if ((flag1 == true) && (flag2 == true)){
-      alert("Enviado");
+    if ((flag1 === true) && (flag2 === true)){
+      alert("Enviado" + flag1 + flag2);
       document.getElementById("texto1").style.visibility= "hidden";
       document.getElementById("texto2").style.visibility="hidden";
     }
