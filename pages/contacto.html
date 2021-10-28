@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    
     <title>Contacto | Tango Companions</title>
 </head>
 <body>
@@ -32,20 +31,41 @@
         </div>
         
     </nav>
-    
+    <header>
+      <!-- Efecto parallax - header -->
+      <div class="parallax1">
+          <div class="parallax__content">
+              <h1 class="parallax__title">Tango <span>Companions</span></h1>
+          </div>
+      </div>
+
+  </header>
+
+
     <main class="container" id='form'>
         <h2>Contacto</h2>
-        <form action="../js/validacion.js" method="get">
-          <label for="iname">Nombre:</label>
-          <input class="campo" id="iname" type="text" name ="name"><br>
+        <form id="form" action="#" novalidate>
 
-          <label for="iemail">E-mail:</label>
-          <input class="campo" id="iemail" type="email" name ="email"><br>
+          <div class ="camponombre">
+            <label for="nombre">Nombre:</label><br>
+            <input id="nombre" type="text" 
+              placeholder="Ingrese su nombre">
+              <span class="texto1" id = "texto1"></span>
+          </div><br>
 
-          <label for="irequest">Consulta:</label><br>
-          <textarea class="campo" id="irequest" type="textarea" name ="request"></textarea><br>          
-          <br>
-          <button type="submit" value="Enviar" onclick= "return enviarFormulario" class="button">Enviar</button>  
+          <div class ="campomail">
+            <label for="email">E-mail:</label><br>
+            <input id="email" type="text"
+              placeholder="Ingrese su e-mail">
+            <span class="texto2" id="texto2"></span>
+          </div><br>
+          <div class ="consulta">
+            <label for="consulta">Consulta:</label><br>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Deje su consulta"></textarea>
+          </div><br>
+
+
+          <button type="submit" value="Enviar" onclick="validar()" class="button">Enviar</button>  
         </form>
     </main>
 
@@ -53,7 +73,7 @@
         <p>Curso Full Stack Python | Comisión 2172 - </p>
         <p>Alumnos: Valeria Silveira y Anibal Maidana</p>
     </footer>
+    <script src="../js/validacion.js" type="text/javascript"></script>
 
-    <script src="../js/validacion.js"></script>
 </body>
 </html>
