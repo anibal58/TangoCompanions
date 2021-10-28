@@ -32,8 +32,10 @@ function validar(){
 
     if ((flag1 === true) && (flag2 === true)){
       alert("Enviado" + flag1 + flag2);
-      document.getElementById("texto1").style.visibility= "hidden";
-      document.getElementById("texto2").style.visibility="hidden";
+      document.getElementById("texto1").style.visibility = "hidden";
+      document.getElementById("texto2").style.visibility = "hidden";
+      document.getElementById("nombre").value = "";
+      document.getElementById("email").value = "";
     }
   
 
