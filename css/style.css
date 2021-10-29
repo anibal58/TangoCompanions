@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*Generales*/
 @import url("https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Engagement&display=swap");
@@ -7,12 +8,14 @@
   box-sizing: border-box; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth;}
 
 body {
-  font-size: 16px;
+  font-size: 20px;
   font-family: "Mukta", sans-serif;
-  background-color: #0c0c0c; }
+  background-color: #0c0c0c;
+  min-height: 100vh;}
   body.fix-body {
     overflow: hidden; }
 
@@ -201,8 +204,47 @@ nav {
 
 footer {
   padding: 2rem;
-  color: #fff; }
+  color: #fff;
+  bottom: 0;}
 
+form {
+  margin: 0 auto;
+  width: 350px;
+  color: #ffffff;
+}
+#form .texto1 {
+  display: block;
+  color : #ffffff;
+  font-weight: 300;
+  font-style: italic;
+  padding: 5px;
+}
+#form .texto2 {
+  display: block;
+  color : #ffffff;
+  font-weight: 300;
+  font-style: italic;
+  padding: 5px;
+}
+
+#form #campomail{
+  width: 300px;
+  background: #29ff29;
+  outline: none;
+  border: none;
+}
+
+textarea {
+  width: 250px;
+  height: 100px;
+}
+section {
+  height: 100vh;
+}
+
+input {
+  width: 80%;
+}
 @media (min-width: 768px) {
   footer {
     display: flex;
@@ -302,3 +344,19 @@ footer {
 @media (min-width: 768px) {
   .galeria {
     grid-template-columns: repeat(3, 1fr); } }
+=======
+.container{
+  max-width: 960px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  font-size: 24px;
+  padding: 25px;
+}
+
+.parallax{
+  background: url('img/ardian-lumi-6Woj_wozqmA-unsplash.jpg') no-repeat center;
+  background-size: cover;
+  background-attachment: fixded;
+  height: 500px;
+}
+>>>>>>> 8cb88d98177bd1d837fa3c7657ca5db8dd533250
