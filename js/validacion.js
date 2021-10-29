@@ -31,7 +31,11 @@ function validar(){
     } 
 
     if ((flag1 === true) && (flag2 === true)){
-      alert("Enviado" + flag1 + flag2);
+      document.querySelector('.submit-button');
+      const confirm = document.querySelector('.submit-confirm');
+      confirm.textContent = '¡El formulario ha sido enviado con éxito!'
+      confirm.style.color = '#7fffd4'
+      
       document.getElementById("texto1").style.visibility = "hidden";
       document.getElementById("texto2").style.visibility = "hidden";
       document.getElementById("nombre").value = "";
